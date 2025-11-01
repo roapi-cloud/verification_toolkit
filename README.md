@@ -90,3 +90,41 @@ pytest
 ## License
 
 MIT
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Ensure all tests pass: `pytest`
+6. Commit your changes
+7. Push to your fork
+8. Create a Pull Request
+
+## Publishing to GitHub
+
+To publish this project as a new GitHub repository:
+
+### Option 1: Using the Setup Script (Recommended)
+
+1. Install GitHub CLI: `brew install gh` (macOS) or visit [cli.github.com](https://cli.github.com/)
+2. Login to GitHub: `gh auth login`
+3. Run the setup script: `./setup_github.sh`
+4. Follow the prompts to create your repository
+
+### Option 2: Manual Setup
+
+1. Create a new repository on GitHub (don't initialize with README)
+2. Add the remote: `git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git`
+3. Push the code: `git push -u origin main`
+
+### Option 3: Using GitHub CLI
+
+```bash
+# Create repository
+gh repo create verification-toolkit --public --description "Standalone verification toolkit with batch workflow support"
+
+# Push code
+git push -u origin main
+```

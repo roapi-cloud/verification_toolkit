@@ -25,8 +25,8 @@ class JobExecutor:
 
     async def execute(self) -> EvaluationResult:
         """Execute the job and return results."""
-        # Prepare context
-        context = await self.context_provider.prepare_context(
+        # Prepare context (sync call)
+        context = self.context_provider.prepare_context(
             self.config
         )
 
