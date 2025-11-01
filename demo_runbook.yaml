@@ -1,0 +1,16 @@
+name: "demo-runbook"
+jobs:
+  - id: "demo-job-1"
+    type: "github"
+    agent: "demo"
+    issue_url: "https://github.com/microsoft/vscode/issues/1"
+    agent_kwargs: {}
+
+  - id: "demo-job-2"
+    type: "github"
+    agent: "demo"
+    issue_url: "https://github.com/microsoft/vscode/issues/2"
+    agent_kwargs: {}
+
+max_parallel: 2
+output_dir: "./demo_output"

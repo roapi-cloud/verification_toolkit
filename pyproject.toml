@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verification-toolkit"
+version = "0.1.0"
+description = "Standalone verification toolkit extracted from the Lingxi agent stack"
+readme = "README.md"
+authors = [{ name = "Lingxi Team" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+    "GitPython>=3.1.40",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.scripts]
+verification-demo = "examples.demo_agent:cli"
+batch-workflow = "verification_toolkit.batch_workflow.cli:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
